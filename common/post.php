@@ -14,3 +14,11 @@ function get_post(int $index): ?Array {
 
   return null;
 }
+
+function createPost($title, $body){
+  $previewData = get_posts();
+  $previewData[] = array('title' => $title, 'body' => $body);
+  $newPost = json_encode($previewData);
+  file_put_contents(__DIR__ . "/data/posts.json", $newPost);
+}
+

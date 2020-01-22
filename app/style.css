@@ -10,16 +10,48 @@
 }
 
 .title{
-    color: white;
-    background:black;
+    color: black;
+    background:#f57900;
     height: 50px;
 }
 
 .body{
-    background: grey;
-    color: white;
+    background: #eeeeec;
+    color: black;
 }
 
 li{
     list-style-type: none;
+}
+
+.addPost, .upPost, .return, .delete{
+    background-color: grey;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px; 
+}
+
+.btn{
+    text-decoration: none;
+    position: absolute;
+    top: 27px; left: 8px;
+    color: white;
+}
+
+.newPosts{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title2{
+    text-align: center;
+}
+
+.crud{
+    display: flex;
+    justify-content: center;
 }

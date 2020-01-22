@@ -22,3 +22,17 @@ function createPost($title, $body){
   file_put_contents(__DIR__ . "/data/posts.json", $newPost);
 }
 
+function updatePost($post_id, $newTitle, $newBody){
+  $posts = get_posts();
+  $posts[$post_id] = array('title' => $newTitle, 'body' => $newBody);
+  $newPosts = json_encode($posts);
+  file_put_contents(__DIR__ . "/data/posts.json", $newPosts);
+}
+
+function deletePost($post_id, $title, $body){
+  $posts = get_posts();
+  $posts[$post_id] = array('title' => $title, 'body' => $body);
+  unset($posts[$post_id]);
+  $newPosts = json_encode($posts);
+  file_put_contents(__DIR__ . "/data/posts.json", $newPosts);
+}

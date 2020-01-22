@@ -1,9 +1,7 @@
 <?php
+require_once "../common/utils.php";
 function get_posts(): ?Array {
-  // Get the contents of the JSON file 
-  $strJsonFileContents = file_get_contents(__DIR__ . "/data/posts.json");
-
-  return json_decode($strJsonFileContents, true);
+  return parse_json_file(__DIR__ . "/data/posts.json");
 }
 
 function get_post(int $index): ?Array {
@@ -33,6 +31,6 @@ function deletePost($post_id, $title, $body){
   $posts = get_posts();
   $posts[$post_id] = array('title' => $title, 'body' => $body);
   unset($posts[$post_id]);
-  $newPosts = json_encode($posts);
-  file_put_contents(__DIR__ . "/data/posts.json", $newPosts);
+  save_json_file(get_collection_path("posts"), $posts);
 }
+

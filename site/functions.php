@@ -1,21 +1,16 @@
 <?php
+function debug($variable){
+    echo '<pre>' . print_r($variable, true) . '<pre>';
+}
+
 function createPostButtons(int $id = -1){
     ?>
     <div class="crud">
-      <div class="addPost">
-        <a href="create.php" class="btn">Add post</a>
-      </div>
+        <a href="create.php" role="button" class="btn btn-outline-success ml-1">Add post</a>
       <?php if($id >= 0){ ?>
-            <div class="upPost">
-                <a href="update.php?id=<?= $id ?>" class="btn">Edit post</a>
-            </div>
-            <div class="delete">
-                <a href="delete.php?id=<?= $id ?>" class="btn">Delete it</a>
-            </div>
-            <div class="return">
-                <a href="posts.php" class="btn">Go Back</a>
-            </div>
-            
+                <a href="update.php?id=<?= $id ?>" role="button" class="btn btn-outline-warning ml-1">Edit post</a>
+                <a href="delete.php?id=<?= $id ?>" role="button" class="btn btn-outline-danger ml-1">Delete it</a>
+                <a href="posts.php" role="button" class="btn btn-outline-secondary ml-1">Go Back</a>
         <?php } ?>
     </div>
     <?php

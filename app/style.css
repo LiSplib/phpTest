@@ -24,31 +24,15 @@ li{
     list-style-type: none;
 }
 
-.addPost, .upPost, .return, .delete{
+/* .addPost, .upPost, .return, .delete{
     background-color: grey;
     width: 75px;
     height: 75px;
     border-radius: 50%;
     position: relative;
     margin: 20px; 
-}
+} */
 
-.btn{
-    text-decoration: none;
-    position: absolute;
-    top: 27px; left: 8px;
-    color: white;
-}
-
-.btn2{
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: #f57900;
-    height: 30px;
-    color: black;
-    margin: 5px;
-    padding: 5px;
-}
 
 .newPosts{
     margin-top: 50px;

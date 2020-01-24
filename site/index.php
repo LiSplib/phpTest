@@ -2,17 +2,9 @@
 session_start();
 
 include 'header.php';?>
-<div class="log">
-    <a href="register.php" class="btn2">Sign In</a>
-    <a href="index.php" class="btn2">Log In</a>
-</div>
-<div class="userLog"> 
-    <form action="login.php" method="POST">
-        <label>Username</label>
-            <input type="text" name="username"/>
-        <label>Password</label>
-            <input type="password" name="password"/>
-            <input type="submit" value="Connect"/>
-    </form>
-</div>
 
+<div style="width: 100%; height: 100vh; background: url('background.jpg'); background-size: 100%;"></div>
+
+<?php
+
+include 'footer.php';

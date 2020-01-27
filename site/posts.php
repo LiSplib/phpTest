@@ -3,7 +3,7 @@ require_once '../common/post.php';
 require_once '../site/functions.php';
 
 include 'header.php';?>
-<h1>Welcome <?= $_SESSION['username'] ?></h1>
+<h1 class="mt-5">Welcome <?= $_SESSION['username'] ?></h1>
 <ul class="mt-5 list-group text-center">
 <?php 
     $posts = get_posts();

@@ -1,6 +1,6 @@
 <?php 
 include 'header.php';
-
+session_start();
 require_once '../common/post.php';
 
 require_once '../site/functions.php';

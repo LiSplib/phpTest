@@ -23,11 +23,11 @@ if(!empty($_POST)){
     if(empty($errors)){
     require_once 'db.php';
 
-    $req = $pdo->prepare("INSERT INTO users SET username = ?, password = ?, email = ?");
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $req->execute([$_POST['username'], $password, $_POST['email']]);
-    die('Votre compte a bie été créé');
-    header('Location: http://localhost/testphp/site/register.php');
+        $req = $pdo->prepare("INSERT INTO users SET username = ?, password = ?, email = ?");
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $req->execute([$_POST['username'], $password, $_POST['email']]);
+        die('Votre compte a bien été créé');
+        header('Location: http://localhost/testphp/site/register.php');
     }
 
     debug($errors);
